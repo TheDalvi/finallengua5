@@ -1,0 +1,53 @@
+
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button  defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registro</ion-title>
+</ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <img class="app-login__logo" src="../../assets/card.JPG">
+  </ion-row>
+      <ion-grid>
+        <ion-row>
+            <ion-col>
+                <ion-list>
+                        <ion-item class="app-inputs" color="background">
+                          <ion-select interface="popover" placeholder="Tipo de cuenta" (ionChange)="handleChange($event)">
+                            <ion-select-option value="Cliente">Cliente</ion-select-option>
+                            <ion-select-option value="Empresa">Empresa</ion-select-option>
+                          </ion-select>
+                        </ion-item>
+                        <!-- Nombre -->
+                        <ion-item lines="none" class="app-inputs" color="background">
+                          <ion-input placeholder="nombre y apellido" type="text" [(ngModel)]="nombre"></ion-input>
+                        </ion-item>
+                      <!-- Correo -->
+                        <ion-item lines="none" class="app-inputs" color="background">
+                          <ion-input placeholder="correo" type="text" [(ngModel)]="correo"></ion-input>
+                        </ion-item>
+                        <!-- Password -->
+                        <ion-item lines="none" class="app-inputs" color="background">
+                          <ion-input placeholder="password" type="password" [(ngModel)]="password">
+                          </ion-input>
+                        </ion-item>
+
+                        <!-- Repetir Password -->
+                        <ion-item lines="none" class="app-inputs" color="background">
+                          <ion-input placeholder="repetir password" type="password" [(ngModel)]="password2">
+                          </ion-input>
+                        </ion-item>
+                    
+                    <!-- Button -->
+                    <ion-button class="button-login"  color="primary" size="block" (click)="crearCuenta()">
+                      Crear cuenta
+                    </ion-button>
+                </ion-list>
+            </ion-col>
+        </ion-row>
+      </ion-grid>
+</ion-content>
